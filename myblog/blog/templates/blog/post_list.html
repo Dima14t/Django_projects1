@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Мой Блог</title>
+</head>
+<body>
+    <h1>Посты Блога</h1>
+    {% for post in posts %}
+        <div>
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.text }}</p>
+            <p><small>Опубликовано: {{ post.pub_date }}</small></p>
+        </div>
+        <hr>
+    {% empty %}
+        <p>Постов пока нет (Добавлять сюда).</p>
+    {% endfor %}
+</body>
+</html>
